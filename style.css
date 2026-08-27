@@ -16,13 +16,33 @@ var {
   --border-radius: 12px;
   --box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
+/* Căn giữa toàn bộ trang web theo cả chiều ngang và chiều dọc */
 body {
-  background: #f4f5f7;
-  padding: 20px;
-  color: #333;
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  background-color: #f0f2f5;
+  box-sizing: border-box;
+}
+
+/* Khung tổng chứa 2 bảng: Giới hạn độ rộng tối đa và gom gọn vào giữa */
+.container {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+  max-width: 1050px; /* Thu hẹp độ rộng tổng (có thể chỉnh thành 950px nếu muốn gọn hơn nữa) */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Chia đều không gian cho 2 bên */
+.input-section, 
+.preview-section {
+  flex: 1;
+  width: 50%;
 }
 
 .editor-panel {
