@@ -33,17 +33,17 @@ body {
   display: flex !important;
   justify-content: center !important;
   align-items: flex-start !important;
-  gap: 200px !important; /* Tăng khoảng cách ở đây (50px - 60px tùy ý bạn) */
+  gap: 50px !important;
   width: fit-content !important;
   max-width: 100% !important;
   margin: 0 auto !important;
 }
 
 /* Cột trái: Form nhập liệu */
-.editor-panel, 
+.editor-panel,  
 .input-section {
-  width: 400px;
-  flex: 0 0 400px;
+  width: 400px !important;
+  flex: 0 0 400px !important;
   background: #fff;
   padding: 24px;
   border-radius: var(--border-radius);
@@ -51,9 +51,10 @@ body {
 }
 
 /* Cột phải: Xem trước hóa đơn */
-.preview-container, 
+.preview-container,  
 .preview-section {
-  flex: 1;
+  width: 750px !important;
+  flex: 0 0 750px !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +81,7 @@ body {
   margin-bottom: 4px;
 }
 
-.form-group input[type="text"], 
+.form-group input[type="text"],  
 .form-group input[type="number"] {
   width: 100%;
   padding: 8px 10px;
@@ -110,7 +111,7 @@ body {
   border-collapse: collapse;
 }
 
-.items-table-input th, 
+.items-table-input th,  
 .items-table-input td {
   padding: 6px;
   border: 1px solid #eee;
@@ -205,7 +206,7 @@ body {
 
 .inv-header-left {
   width: 43%;
-  padding: 10px 10px; 
+  padding: 10px 10px;  
 }
 
 .inv-title-main {
@@ -264,9 +265,10 @@ body {
   font-size: 1.05rem;
 }
 
-.inv-table .col-item { width: 43%; text-align: center; color: var(--pink); }
-.inv-table .col-qty { width: 28.5%; text-align: center; color: var(--pink); font-weight: 700; }
-.inv-table .col-price { width: 28.5%; text-align: center; color: var(--pink); font-weight: 700; }
+/* Giữ chữ tiêu đề bảng là var(--pink), còn tên hạng mục và số lượng đổi thành #333 */
+.inv-table .col-item { width: 43%; text-align: center; color: #333; }
+.inv-table .col-qty { width: 28.5%; text-align: center; color: #333; font-weight: 400; }
+.inv-table .col-price { width: 28.5%; text-align: center; color: #333; font-weight: 400; }
 
 /* Footer (QR + Bảng Tính Tiền) */
 .inv-footer {
@@ -328,28 +330,3 @@ body {
 .row-balance { background: var(--pink); color: #fff; font-weight: 600; }
 .row-balance td:first-child { font-size: 1.3rem; }
 .row-balance td:last-child { color: var(--yellow); font-size: 1.4rem; text-align: left; }
-
-/* Khung chứa tổng: Ôm sát nội dung 2 bảng và căn giữa chính diện */
-.container {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: flex-start !important;
-  gap: 30px !important; /* Khoảng cách giữa 2 bảng (muốn gần hơn nữa thì giảm xuống 20px) */
-  width: fit-content !important;
-  max-width: 100% !important;
-  margin: 0 auto !important;
-}
-
-/* Bảng bên trái (Form nhập) - Khung cố định 400px */
-.editor-panel,
-.input-section {
-  width: 400px !important;
-  flex: 0 0 400px !important;
-}
-
-/* Bảng bên phải (Hóa đơn) - Khung vừa khít 750px, không bị dãn thừa khoảng trống */
-.preview-container,
-.preview-section {
-  width: 750px !important;
-  flex: 0 0 750px !important;
-}
