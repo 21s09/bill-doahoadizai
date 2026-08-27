@@ -41,7 +41,7 @@ body {
 /* Cột trái: Form nhập liệu (Thêm margin-right 40px để ép tách 2 bảng) */
 .editor-panel,  
 .input-section {
-  width: 600px !important;
+  width: 1000px !important;
   flex: 0 0 400px !important;
   margin-right: 40px !important;
   background: #fff;
