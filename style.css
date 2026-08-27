@@ -42,7 +42,7 @@ body {
 .editor-panel,  
 .input-section {
   width: 1000px !important;
-  flex: 0 0 400px !important;
+  flex: 0 0 1000px !important;
   margin-right: 40px !important;
   background: #fff;
   padding: 24px;
@@ -53,8 +53,8 @@ body {
 /* Cột phải: Xem trước hóa đơn */
 .preview-container,  
 .preview-section {
-  width: 750px !important;
-  flex: 0 0 750px !important;
+  width: 500px !important;
+  flex: 0 0 500px !important;
   display: flex;
   flex-direction: column;
   align-items: center;
