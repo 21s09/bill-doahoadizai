@@ -30,12 +30,13 @@ body {
    2. LAYOUT TỔNG (CĂN GIỮA & CÂN BẰNG 2 BẢNG)
 ======================================================== */
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px; /* Tăng lên 1200px để vừa vặn form (400px) + hóa đơn (750px) */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 50px !important; /* Tăng khoảng cách ở đây (50px - 60px tùy ý bạn) */
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
 }
 
 /* Cột trái: Form nhập liệu */
@@ -263,9 +264,9 @@ body {
   font-size: 1.05rem;
 }
 
-.inv-table .col-item { width: 43%; text-align: center; color: var(--pink); }
-.inv-table .col-qty { width: 28.5%; text-align: center; color: var(--pink); font-weight: 700; }
-.inv-table .col-price { width: 28.5%; text-align: center; color: var(--pink); font-weight: 700; }
+.inv-table .col-item { width: 43%; text-align: center; color: #333; }
+.inv-table .col-qty { width: 28.5%; text-align: center; color: #333; font-weight: 700; }
+.inv-table .col-price { width: 28.5%; text-align: center; color: #333; font-weight: 700; }
 
 /* Footer (QR + Bảng Tính Tiền) */
 .inv-footer {
