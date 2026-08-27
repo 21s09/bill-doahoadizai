@@ -27,38 +27,41 @@ body {
 }
 
 /* ========================================================
-   2. LAYOUT TỔNG (CĂN GIỮA & CÂN BẰNG 2 BẢNG)
+   2. LAYOUT TỔNG (CĂN GIỮA & CÁCH NHAU CHUẨN)
 ======================================================== */
 .container {
   display: flex !important;
   justify-content: center !important;
-  align-items: flex-start !important;margin-right: 40px !important;
-  width: fit-content !important;
-  max-width: 100% !important;
+  align-items: flex-start !important;
+  gap: 45px !important; /* Khoảng cách cố định vừa đẹp giữa 2 bảng */
+  width: 100% !important;
+  max-width: 1350px !important; /* Mở rộng khung chứa để không bao giờ bị đè */
   margin: 0 auto !important;
 }
 
-/* Cột trái: Form nhập liệu (Thêm margin-right 40px để ép tách 2 bảng) */
+/* Cột trái: Form nhập liệu (Tăng lên 480px cực rộng rãi) */
 .editor-panel,  
 .input-section {
   width: 600px !important;
   flex: 0 0 600px !important;
-  margin-right: 40px !important;
+  margin-right: 0 !important; /* Xóa bỏ margin cũ để dùng gap chuẩn của container */
   background: #fff;
   padding: 24px;
   border-radius: var(--border-radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box !important;
 }
 
-/* Cột phải: Xem trước hóa đơn */
+/* Cột phải: Xem trước hóa đơn (Cố định 750px chuẩn mẫu) */
 .preview-container,  
 .preview-section {
-  width: 500px !important;
-  flex: 0 0 500px !important;
+  width: 750px !important;
+  flex: 0 0 750px !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  box-sizing: border-box !important;
 }
 
 /* ========================================================
