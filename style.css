@@ -33,17 +33,17 @@ body {
   display: flex !important;
   justify-content: center !important;
   align-items: flex-start !important;
-  gap: 50px !important;
   width: fit-content !important;
   max-width: 100% !important;
   margin: 0 auto !important;
 }
 
-/* Cột trái: Form nhập liệu */
+/* Cột trái: Form nhập liệu (Thêm margin-right 40px để ép tách 2 bảng) */
 .editor-panel,  
 .input-section {
   width: 400px !important;
   flex: 0 0 400px !important;
+  margin-right: 40px !important;
   background: #fff;
   padding: 24px;
   border-radius: var(--border-radius);
@@ -244,13 +244,16 @@ body {
   width: 100%;
   border-collapse: collapse;
   background: #fff;
-  color: #333;
   table-layout: fixed;
 }
 
-.inv-table th {
+/* 1. Tiêu đề bảng ("Hạng mục", "Số lượng", "Giá"): Ép màu var(--pink) */
+.inv-table th,
+.inv-table th.col-item,
+.inv-table th.col-qty,
+.inv-table th.col-price {
   background: var(--pinky);
-  color: var(--pink);
+  color: var(--pink) !important;
   font-size: 1.2rem;
   font-weight: 700;
   padding: 10px;
@@ -258,17 +261,22 @@ body {
   text-align: center;
 }
 
-.inv-table td {
+/* 2. Nội dung bảng (Standee, 1, 2...): Ép màu #333 */
+.inv-table td,
+.inv-table td.col-item,
+.inv-table td.col-qty,
+.inv-table td.col-price {
   border: 1.5px solid var(--pink);
   padding: 8px 15px;
   font-weight: 400;
   font-size: 1.05rem;
+  color: #333 !important;
+  text-align: center;
 }
 
-/* Giữ chữ tiêu đề bảng là var(--pink), còn tên hạng mục và số lượng đổi thành #333 */
-.inv-table .col-item { width: 43%; text-align: center; color: #333; }
-.inv-table .col-qty { width: 28.5%; text-align: center; color: #333; font-weight: 400; }
-.inv-table .col-price { width: 28.5%; text-align: center; color: #333; font-weight: 400; }
+.inv-table .col-item { width: 43%; }
+.inv-table .col-qty { width: 28.5%; }
+.inv-table .col-price { width: 28.5%; }
 
 /* Footer (QR + Bảng Tính Tiền) */
 .inv-footer {
