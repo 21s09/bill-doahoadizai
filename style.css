@@ -33,7 +33,7 @@ body {
   display: flex !important;
   justify-content: center !important;
   align-items: flex-start !important;
-  gap: 45px !important; /* Khoảng cách cố định vừa đẹp giữa 2 bảng */
+  gap: 80px !important; /* Khoảng cách cố định vừa đẹp giữa 2 bảng */
   width: 100% !important;
   max-width: 1350px !important; /* Mở rộng khung chứa để không bao giờ bị đè */
   margin: 0 auto !important;
