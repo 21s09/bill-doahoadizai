@@ -1,0 +1,440 @@
+/* ========================================================
+   1. CẤU HÌNH GIAO DIỆN PANEL VÀ LAYOUT TỔNG
+======================================================== */
+* {
+  box-sizing: border-box;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+var {
+  --pink: #F556A1;
+  --pinky: #FFBCE2;
+  --yellow: #ffee99;
+  --text-color: #333;
+  --background-color: #f4f5f7;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+body {
+  background: #f4f5f7;
+  padding: 20px;
+  color: #333;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.editor-panel {
+  flex: 1;
+  min-width: 340px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.editor-panel h2 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #f556a1;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-group input[type="text"], 
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin: 6px 0;
+  font-size: 0.85rem;
+}
+
+.radio-group label {
+  font-weight: normal;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.items-table-input {
+  width: 100%;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+}
+
+.items-table-input th, 
+.items-table-input td {
+  padding: 6px;
+  border: 1px solid #eee;
+  text-align: left;
+}
+
+.items-table-input input {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-add {
+  background: #e8f5e9;
+  color: #2e7d32;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.btn-remove {
+  background: #ffebee;
+  color: #c62828;
+  padding: 4px 8px;
+}
+
+.btn-export {
+  background: #f556a1;
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.btn-export:hover {
+  background: #f556a1;
+}
+
+.preview-container {
+  flex: 1.2;
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ========================================================
+   2. CUSTOM MẪU HÓA ĐƠN EXPORT (MÀU NỀN, FONT, BO GÓC...)
+======================================================== */
+#invoice {
+  width: 750px;
+  background: #f556a1; /* Màu nền chính của hóa đơn */
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  border-radius: 0px; /* Chỉnh bo góc hóa đơn ở đây (ví dụ: 12px) */
+  overflow: hidden;
+}
+
+/* Header Hóa Đơn */
+.inv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 25px 30px 15px 30px;
+}
+
+.inv-title-main {
+  color: #ffee99;
+  font-size: 2rem;
+  font-weight: 700;font-family: 'Be Vietnam Pro', sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.inv-title-sub {
+  color: #ffee99;
+  font-size: 1.4rem;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight:700;
+  margin-top: 4px;
+}
+
+/* Header Hóa Đơn */
+.inv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Căn giữa logo và tiêu đề theo chiều dọc */
+  padding: 25px 30px;  /* Lề trên & dưới đều bằng 25px (trái & phải 30px) */
+}
+
+/* Vùng chứa Logo */
+.inv-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Ảnh Logo */
+.inv-logo-img {
+  display: block;     /* Xóa khoảng hở thừa mặc định dưới chân thẻ img */
+/* Chỉnh tăng/giảm số này để thay đổi độ to nhỏ logo */
+  max-width: 350px;
+  object-fit: contain;
+}
+
+.inv-brand-handle {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #fff;
+  margin-top: 4px;
+}
+
+.inv-brand-note {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FFEE99;
+  margin-top: 2px;
+}
+
+/* Bảng Hạng Mục */
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  color: #333;
+}
+
+.inv-table th {
+  background: #ffb8d4; /* Màu nền tiêu đề bảng */
+  color: #F556A1;      /* Màu chữ tiêu đề bảng */
+  font-size: 1.2rem;   /* Kích thước chữ tiêu đề */
+  font-weight: 800;
+  padding: 10px;
+  border: 1px solid #fcb3cf; /* Màu viền bảng */
+  text-align: center;
+}
+
+.inv-table td {
+  border: 1.5px solid #fcb3cf; /* Màu viền từng ô */
+  padding: 8px 15px;
+  font-weight: 400;
+  font-size: 1.05rem; /* Kích thước chữ hạng mục */
+}
+
+.inv-table td.col-item { text-align: left; width: 55%; color: #111; }
+.inv-table td.col-qty { text-align: center; width: 20%; color: #111; font-weight: 400; }
+.inv-table td.col-price { text-align: center; width: 25%; color: #111; font-weight: 400; }
+
+/* ========================================================
+   CUSTOM MẪU HÓA ĐƠN EXPORT (CHIA CỘT CHUẨN ĐỚT 43% - 28.5% - 28.5%)
+======================================================== */
+#invoice {
+  width: 750px;
+  background: #F556A1;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 1. Header */
+.inv-header {
+  display: flex;
+  align-items: center;
+}
+
+/* 1. Lề bên trái (chứa chữ BÁO GIÁ) */
+.inv-header-left {
+  width: 43%;
+  padding: 10px 10px; 
+}
+
+/* 2. Lề bên phải (chứa Logo) */
+.inv-brand {
+  width: 57%;
+  padding: 8px 15px;  /* Cũ là 15px 25px -> Giảm lề trên/dưới xuống 8px, trái/phải xuống 15px */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.inv-title-main {
+  color: #FFEE99;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.inv-title-sub {
+  color: #FFEE99;
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.inv-brand {
+  width: 57%; /* Khớp 2 cột Số lượng + Giá */
+  padding: 15px 25px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.inv-logo-img {
+  display: block;
+  max-height: 75px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* 2. Bảng Hạng Mục */
+.inv-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  color: #333;
+  table-layout: fixed; /* Cố định tỉ lệ cột không bị xê dịch */
+}
+
+.inv-table th {
+  background: #FFBCE2;
+  color: #F556A1;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 10px;
+  border: 1px solid #F556A1;
+  text-align: center;
+}
+
+.inv-table td {
+  border: 1.5px solid #F556A1;
+  padding: 8px 15px;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+
+/* Chia tỉ lệ 3 cột */
+.inv-table .col-item { width: 43%; text-align: center; color: #F556A1; }
+.inv-table .col-qty { width: 28.5%; text-align: center; color: #F556A1; font-weight: 700; }
+.inv-table .col-price { width: 28.5%; text-align: center; color: #F556A1; font-weight: 700; }
+
+/* 3. Footer (QR + Bảng Tính Tiền) */
+.inv-footer {
+  display: flex;
+
+}
+
+/* Ô chứa QR bên trái (Rộng đúng 43%) */
+.inv-qr-box {
+  width: 43%;   background: #FDEBF2;
+  display: flex;
+  align-items: center;
+  justify-content: center; border-left: 1px solid #F556A1; border-bottom: 1px solid #F556A1; border-right: 1px solid #F556A1;
+  padding: 10px;
+}
+
+.inv-qr-img {
+  max-width: 95%;
+  max-height: 170px;
+  object-fit: contain;
+}
+
+/* Bảng tổng tiền bên phải (Rộng đúng 57%) */
+.inv-summary {
+  width: 57%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.inv-summary td {
+  padding: 8px 15px;
+  font-size: 1.2rem;
+}
+
+/* Nhãn bên trái (Khớp cột Số lượng = 50% của 57%) */
+.inv-summary td:first-child {
+  width: 50%;
+  text-align: right;
+  border-right: 1.5px solid #F556A1; border-bottom: 1.5px solid #F556A1;/* Đường dọc phân chia giữa Số lượng và Giá */
+}
+
+/* Giá trị bên phải (Khớp cột Giá = 50% còn lại) */
+.inv-summary td:last-child {
+  width: 50%;
+  text-align: right;border-bottom: 1.5px solid #F556A1;
+}
+
+.row-total { background: #F556A1; color: #fff; font-weight: 600; }
+.row-total td:last-child { color: #FFEE99; font-size: 1.3rem; text-align: left;}
+
+.row-discount, .row-deposit { background: #ffcbe1; color: #F556A1; }
+.row-discount td:first-child { font-style: italic; font-size: 1rem; font-weight: 400; }
+.row-discount td:last-child { color: #F556A1; font-weight: 400; text-align: left;border-right: 1.5px solid #F556A1;}
+
+.row-deposit td:first-child { font-weight: 400; font-size: 1rem; }
+.row-deposit td:last-child { color: #F556A1; font-weight: 400; text-align: left;}
+
+.row-balance { background: #F556A1; color: #fff; font-weight: 600; }
+.row-balance td:first-child { font-size: 1.3rem; }
+.row-balance td:last-child { color: #FFEE99; font-size: 1.4rem; text-align: left;}
+
+/* Cụm chứa 2 nút bấm */
+.action-buttons {
+  display: flex !important;
+  gap: 12px !important;
+  margin-top: 15px !important;
+  width: 100% !important;
+}
+
+/* Ép cả 2 nút dùng chuẩn khung kích thước y hệt nhau */
+.action-buttons .btn-export,
+.action-buttons .btn-copy {
+  flex: 1 1 0% !important;
+  height: 45px !important;
+  min-height: 45px !important;
+  max-height: 45px !important;
+  
+  padding: 0 10px !important;
+  margin: 0 !important;
+  
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  
+  border-radius: 25px !important;
+  border: none !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  
+  background: #F556A1 !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.action-buttons .btn-export:hover,
+.action-buttons .btn-copy:hover {
+  opacity: 0.9 !important;
+}
