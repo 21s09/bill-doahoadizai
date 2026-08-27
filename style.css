@@ -67,7 +67,7 @@ body {
 /* Tối ưu tỉ lệ chiều rộng các cột trong bảng nhập liệu */
 .items-table-input th:nth-child(1),
 .items-table-input td:nth-child(1) {
-  width: 55%; /* Ô Hạng mục chiếm 55% chiều rộng (dài hơn hẳn) */
+  width: 60%; /* Ô Hạng mục chiếm 55% chiều rộng (dài hơn hẳn) */
 }
 
 .items-table-input th:nth-child(2),
