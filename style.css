@@ -33,18 +33,17 @@ body {
   display: flex !important;
   justify-content: center !important;
   align-items: flex-start !important;
-  gap: 80px !important; /* Khoảng cách cố định vừa đẹp giữa 2 bảng */
-  width: 100% !important;
-  max-width: 1350px !important; /* Mở rộng khung chứa để không bao giờ bị đè */
+  width: fit-content !important; /* Ôm sát 2 bảng để căn giữa chính xác */
+  max-width: 100% !important;
   margin: 0 auto !important;
 }
 
-/* Cột trái: Form nhập liệu (Tăng lên 480px cực rộng rãi) */
+/* Cột trái: Form nhập liệu (Rộng 500px, ép cách 50px) */
 .editor-panel,  
 .input-section {
   width: 500px !important;
   flex: 0 0 500px !important;
-  margin-right: 40 !important; /* Xóa bỏ margin cũ để dùng gap chuẩn của container */
+  margin-right: 50px !important; /* Đã thêm 'px' chuẩn cú pháp */
   background: #fff;
   padding: 24px;
   border-radius: var(--border-radius);
@@ -52,7 +51,7 @@ body {
   box-sizing: border-box !important;
 }
 
-/* Cột phải: Xem trước hóa đơn (Cố định 750px chuẩn mẫu) */
+/* Cột phải: Xem trước hóa đơn (Cố định 750px) */
 .preview-container,  
 .preview-section {
   width: 750px !important;
