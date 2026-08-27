@@ -64,6 +64,28 @@ body {
 /* ========================================================
    3. GIAO DIỆN FORM NHẬP LIỆU (BÊN TRÁI)
 ======================================================== */
+/* Tối ưu tỉ lệ chiều rộng các cột trong bảng nhập liệu */
+.items-table-input th:nth-child(1),
+.items-table-input td:nth-child(1) {
+  width: 55%; /* Ô Hạng mục chiếm 55% chiều rộng (dài hơn hẳn) */
+}
+
+.items-table-input th:nth-child(2),
+.items-table-input td:nth-child(2) {
+  width: 15%; /* Ô Số lượng chiếm 15% */
+}
+
+.items-table-input th:nth-child(3),
+.items-table-input td:nth-child(3) {
+  width: 22%; /* Ô Đơn giá chiếm 22% */
+}
+
+.items-table-input th:nth-child(4),
+.items-table-input td:nth-child(4) {
+  width: 8%;  /* Nút xóa chiếm 8% */
+  text-align: center;
+}
+
 .editor-panel h2 {
   margin-bottom: 15px;
   font-size: 1.2rem;
