@@ -458,3 +458,18 @@ body {
 .action-buttons .btn-copy:hover {
   opacity: 0.9 !important;
 }
+
+/* Ép 2 cột thẳng hàng bằng mép trên */
+.container {
+  display: flex !important;
+  align-items: flex-start !important; /* Căn thẳng mép trên */
+  justify-content: center !important;
+  gap: 30px !important;
+}
+
+/* Xóa bỏ khoảng lề thừa ở đầu 2 bên */
+.input-section,
+.preview-section,
+#invoice {
+  margin-top: 0 !important;
+}
