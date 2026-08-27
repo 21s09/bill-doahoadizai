@@ -327,3 +327,28 @@ body {
 .row-balance { background: var(--pink); color: #fff; font-weight: 600; }
 .row-balance td:first-child { font-size: 1.3rem; }
 .row-balance td:last-child { color: var(--yellow); font-size: 1.4rem; text-align: left; }
+
+/* Khung chứa tổng: Ôm sát nội dung 2 bảng và căn giữa chính diện */
+.container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 30px !important; /* Khoảng cách giữa 2 bảng (muốn gần hơn nữa thì giảm xuống 20px) */
+  width: fit-content !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+}
+
+/* Bảng bên trái (Form nhập) - Khung cố định 400px */
+.editor-panel,
+.input-section {
+  width: 400px !important;
+  flex: 0 0 400px !important;
+}
+
+/* Bảng bên phải (Hóa đơn) - Khung vừa khít 750px, không bị dãn thừa khoảng trống */
+.preview-container,
+.preview-section {
+  width: 750px !important;
+  flex: 0 0 750px !important;
+}
